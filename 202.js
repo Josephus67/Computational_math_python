@@ -136,3 +136,49 @@ let text=""
 for (let x in person){
    console.log(text+=person[x])
 }
+
+//functions
+function greet(name){
+    console.log(`Hello ${name}!`)
+}
+greet("joe")
+
+function sum(a,b){
+    return a+b
+}
+console.log(sum(2,3))
+
+function avg(a,b){
+  return((a+b)/2)
+}
+console.log(avg(2,3))
+
+//function to say hello to the user
+//let nmae1="Josephus";
+//let name2="Joe"
+function hello(nmae1,name2){
+  welcome=`hello ${nmae1}, can we call you ${name2}?`
+  return welcome
+}
+console.log(hello("Josephus","Joe"))
+
+//function to find the mean of a set of numbers
+X = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,19];
+
+hello =function mean(X) {
+  let sum = 0;
+  for (let i = 0; i < X.length; i++) {
+    sum += X[i];
+  }
+  return (sum / X.length).toFixed(2);
+}
+
+//console.log(mean(X)); 
+
+console.log(hello(X))
+
+function helllo() {
+  console.log("Hello!!");
+}
+helllo();
+//console.log(helllo());
