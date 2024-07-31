@@ -219,4 +219,6 @@ const AAsquare=(Z)=>Z*Z;
  console.log(AAsquare(4))
 
  //Anonymous functions
- 
+ let show = function() { 
+     console.log('Anonymous function')}
+     show();
