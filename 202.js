@@ -272,3 +272,45 @@ const AAsquare=(Z)=>Z*Z;
       console.log(anynumber);
       console.log(anynumber.unshift("bingo"));
       console.log(anynumber);
+
+      //array methods
+      let numbers=[1,2,3,4,5];
+      console.log(numbers.includes(3));
+      console.log(numbers.includes(6));
+      console.log(numbers.indexOf(3));
+      console.log(numbers.lastIndexOf(3));
+      console.log(numbers.reverse());
+      console.log(numbers);
+      console.log(numbers.sort((a,b)=>a-b));
+      console.log(numbers);
+
+      //object literals
+      let person1={name:"John", age:30, city:"New York"}
+      console.log(person1);
+      console.log(person1.name);
+      console.log(person1.age);
+      console.log(person1.city);
+      console.log(person1.country="USA");
+      console.log(person1);
+      delete person1.age;
+      console.log(person1);
+
+      //array map
+      let numbers2=[1,2,3,4,5];
+      let doubledNumbers=numbers2.map((number2)=>number2*2);
+      console.log(doubledNumbers);
+
+      //array filter
+      let numbers3=[1,2,3,4,5];
+      let filteredNumbers=numbers3.filter((number3)=>number3>3);
+      console.log(filteredNumbers);
+
+      //array reduce
+      let numbers4=[1,2,3,4,5];
+      let sumNumbers=numbers4.reduce((total, number4)=>total+number4,0);
+      console.log(sumNumbers);
+
+      //array reduceRight
+      let numbers5=[1,2,3,4,5];
+      let reversedSum=numbers5.reduceRight((total, number5)=>total+number5,0);
+      console.log(reversedSum);
