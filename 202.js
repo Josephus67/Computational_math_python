@@ -222,3 +222,53 @@ const AAsquare=(Z)=>Z*Z;
  let show = function() { 
      console.log('Anonymous function')}
      show();
+
+     let show1=()=>console.log('Arrow function')
+     show1();
+
+     let show2=()=>{console.log('Block function')}
+     show2();
+
+     //Arrays
+     let numbers12 = [1, 2, 3, 4, 5];
+     console.log(numbers12);
+
+
+     //template literals
+     let name = 'John';
+     console.log(`Hello, ${name}!`);
+
+     //default parameters
+     function greet(name = 'World') {
+       console.log(`Hello, ${name}!`);
+     }
+
+     greet();
+
+     //rest parameters
+     function sum(...numbers21) {
+       return numbers21.reduce((total, number21) => total + number21, 0);
+     }
+
+      console.log(sum(1, 2, 3, 4, 5));
+      console.log(sum(1, 2));
+      console.log(sum());
+      console.log(sum(...[1, 2, 3, 4, 5]));
+      console.log(sum(1, 2, ...[3, 4, 5]));
+      console.log(sum(1, 2, ...[3, 4], 5));
+      console.log(sum(...[1, 2], 3, 4, 5));
+      console.log(sum(...[1, 2, 3], 4, 5));
+
+      const anynumber=[1,2,3,4,5,6,7,8,9,10,12,57,23];
+      const array1=anynumber.find((element)=>element>10);
+      console.log(array1);
+      console.log(anynumber.length);
+      console.log(anynumber.toString());
+      console.log(anynumber.join("-"));
+      console.log(anynumber.pop());
+      console.log(anynumber.push(100));
+      console.log(anynumber);
+      console.log(anynumber.shift());
+      console.log(anynumber);
+      console.log(anynumber.unshift("bingo"));
+      console.log(anynumber);
