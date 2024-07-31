@@ -314,3 +314,49 @@ const AAsquare=(Z)=>Z*Z;
       let numbers5=[1,2,3,4,5];
       let reversedSum=numbers5.reduceRight((total, number5)=>total+number5,0);
       console.log(reversedSum);
+//objects
+const joejoe={
+  iname:"Josephus",
+  sname: "Bawah",
+  age: 21,
+  height: "6ft3",
+  eyecolor:"blue",
+}
+console.log(joejoe.age);
+console.log(joejoe['eyecolor']);
+joejoe.nationality="Ghanaian";
+console.log("nationality" && "iname" in joejoe);
+for (const key in joejoe){
+  console.log(`${key}:${joejoe[key]}`);
+}
+
+//constructors
+function Persone(name, age, height, eyecolor){
+  this.name=name;
+  this.age=age;
+  this.height=height;
+  this.eyecolor=eyecolor;
+}
+
+const fborn= new Persone("Joe",30,"6ft3","blue")
+const sborn=new Persone("Romanus",20,"6ft","green")
+const tborn=new Persone("Keren",13,"5ft1","white")
+const lborn= new Persone("Immaculate",10,"3ft9","pink")
+console.log(fborn);
+console.log(sborn);
+console.log(tborn);
+console.log(lborn);
+console.log(fborn.name);
+console.log(sborn.age);
+console.log(tborn.height);
+console.log(lborn.eyecolor);
+
+function UG(studentName,ID,course,level){
+  this.studentName=studentName;
+  this.ID=ID;
+  this.course=course;
+  this.level=level;
+}
+const student1=new UG("Josephus",11038230,"Comp science",200);
+console.log(student1);
+console.log(student1.ID)
