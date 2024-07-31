@@ -1,3 +1,5 @@
+const { Console } = require("console");
+
 console.log("whats up brothers")
 //String concatenation
 
@@ -182,3 +184,39 @@ function helllo() {
 }
 helllo();
 //console.log(helllo());
+
+//arrow functions
+function emm(name3){
+  console.log(`Hello, ${name3}!!, mtf`)
+}
+emm("Joe");
+
+const emmm=(name4)=>{
+  console.log(`Hello, ${name4}!!, mtf`) 
+}
+emmm("joe");
+
+function add1(a, b) {
+  return a + b;
+}
+const add2=(a,b)=>{
+  return a+b;
+}
+
+console.log(add2(2,3));
+
+function square(X){
+  return X*X;
+}
+console.log(square(4))
+
+const Asquare=(Y)=>{
+  return Y**2;
+}
+console.log(Asquare(4));
+
+const AAsquare=(Z)=>Z*Z;
+ console.log(AAsquare(4))
+
+ //Anonymous functions
+ 
