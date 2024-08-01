@@ -240,25 +240,25 @@ const AAsquare=(Z)=>Z*Z;
      console.log(`Hello, ${name}!`);
 
      //default parameters
-     function greet(name = 'World') {
+     function greett(name = 'World') {
        console.log(`Hello, ${name}!`);
      }
 
-     greet();
+     greett();
 
      //rest parameters
-     function sum(...numbers21) {
+     function sum1(...numbers21) {
        return numbers21.reduce((total, number21) => total + number21, 0);
      }
 
-      console.log(sum(1, 2, 3, 4, 5));
-      console.log(sum(1, 2));
-      console.log(sum());
-      console.log(sum(...[1, 2, 3, 4, 5]));
-      console.log(sum(1, 2, ...[3, 4, 5]));
-      console.log(sum(1, 2, ...[3, 4], 5));
-      console.log(sum(...[1, 2], 3, 4, 5));
-      console.log(sum(...[1, 2, 3], 4, 5));
+      console.log(sum1(1, 2, 3, 4, 5));
+      console.log(sum1(1, 2));
+      console.log(sum1());
+      console.log(sum1(...[1, 2, 3, 4, 5]));
+      console.log(sum1(1, 2, ...[3, 4, 5]));
+      console.log(sum1(1, 2, ...[3, 4], 5));
+      console.log(sum1(...[1, 2], 3, 4, 5));
+      console.log(sum1(...[1, 2, 3], 4, 5));
 
       const anynumber=[1,2,3,4,5,6,7,8,9,10,12,57,23];
       const array1=anynumber.find((element)=>element>10);
@@ -424,3 +424,59 @@ class Animal{
   }
 }
   */
+ //callbacks
+ /*
+  const greet1=(name)=>{
+    console.log(`Hello, ${name}!`);
+  }
+ const animalSpeak=animal=>{
+  animal.speak();
+}
+ animalSpeak(new Animal("Lion",10));
+ greet1("World");
+ */
+
+ function scetch(){
+  console.log("what's up brothers");
+ }
+ function speed(x,scetch){
+  scetch();
+  console.log("ishowmeat");
+ }
+ speed(2,scetch)
+
+
+//asynchronous javascript
+/*
+const fetchData=async()=>{
+  try{
+    const response=await fetch('https://api.example.com/data');
+    if (!response.ok){
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data=await response.json();
+    console.log(data);
+  }catch(error){
+    console.error("There was an error:", error);
+  }
+}
+fetchData();
+*/
+
+//promise: a promise is an object that links producing code and consuming code
+//async functions
+async function greet3(){
+  return "hello world";
+}
+greet3().then((message) => {
+  console.log(message);
+});
+function greet4(){
+  return Promise.resolve("hello world 2");
+}
+greet4().then((message) => {
+  console.log(message);
+});
+
+import jojo from "./message.mjs";
+console.log(jojo);
