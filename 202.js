@@ -1,4 +1,5 @@
 const { Console } = require("console");
+const { get } = require("http");
 
 console.log("whats up brothers")
 //String concatenation
@@ -360,3 +361,20 @@ function UG(studentName,ID,course,level){
 const student1=new UG("Josephus",11038230,"Comp science",200);
 console.log(student1);
 console.log(student1.ID)
+//getters
+const bingo={
+  _name:"John",
+  _age:30,
+  _height: "7ft",
+  get name(){
+    return this._name
+  },
+  get age(){
+    return this._age
+  },
+  get height(){
+    return this._height
+  }
+};
+console.log(bingo);
+console.log(bingo.name);
