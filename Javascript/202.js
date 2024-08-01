@@ -1,4 +1,4 @@
-const { Console } = require("console");
+const { Console, error } = require("console");
 const { get } = require("http");
 
 console.log("whats up brothers")
@@ -378,3 +378,49 @@ const bingo={
 };
 console.log(bingo);
 console.log(bingo.name);
+//error handling
+try{
+  console.log(bingo.height);
+}catch(error){
+  console.log(error);
+}
+console.log("hello world");
+function withdraw(amount) {
+  const balance=100;
+  if (amount>balance){
+    throw new Error("you have insufficient funds");
+  }
+  return balance-amount
+}
+try {
+console.log(withdraw(50));
+console.log(withdraw(150));
+} catch (error){
+console.error(error.message);
+}
+
+function divides(a,b){
+  try{
+  if (b===0){
+    throw new Error("cannot divide by zero");
+  }
+  return a/b;
+}
+catch (error){
+console.error(error.message);
+return null;
+}
+}
+console.log(divides(2,0));
+//inheritance
+/*
+class Animal{
+  constructor(name, age){
+    this.name=name;
+    this.age=age;
+  }
+  speak(){
+    console.log(`${this.name} makes a sound`);
+  }
+}
+  */
