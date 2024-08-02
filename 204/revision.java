@@ -12,5 +12,6 @@ public class revision {
         }
 
         System.out.println("The maximum number is: " + max);
+        
     }
 }
