@@ -125,6 +125,7 @@ more_than3=[i for i in numbers1 if  i%3==0]
 print(more_than3)
 '''
 numbers3=[1,2,3,4,5,6,67,7,8,9,10]
+'''
 print(numbers3[6])
 check="Josephus"
 print(check[::-1])
@@ -165,3 +166,40 @@ print("hello world".capitalize())  # Hello world
 print("hello world".upper())  # HELLO WORLD
 print("HELLO WORLD".lower())  # hello world
 print("hello world".title())  # Hello World
+'''
+#for i in numbers3:
+ #   print(i)
+div_2=[]
+for i in numbers3:
+    if i%2==0:
+        div_2.append(i)
+print(div_2)
+a = [1,2,3,4,5,6,7,8,9,10]
+a_split = [[],[]]
+for num in a:
+    if num%2==0:
+        a_split[0].append(num)
+    else: a_split[1].append(num)
+print(a_split)
+print("even numbers are: ",a_split[0])
+print("odd numbers are: ",a_split[1])
+for letter in "hello world":
+    print(letter)
+matrix=[[1,2,3],[4,5,6,7]]
+nums=[]
+for row in matrix:
+    for item in row:
+        nums.append(item)
+print(nums)
+family=["joe","Romanus","Keren","Immaculate"]
+ages=[21,18,12,10]
+for name, age in zip(family,ages):
+     print(name,"is", age, "years of age")
+suquare2=[num**2 for num in range(2,11,2) ]
+print(suquare2)
+suquare3=[num**2 for num in range(1,10,2)]
+print(suquare3)
+suquare=[i**2 for i in numbers3]
+print(suquare)
+suquare_div_by_3=[num for num in numbers3 if num%3==0]
+print(suquare_div_by_3)
