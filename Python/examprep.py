@@ -1,4 +1,4 @@
-
+'''
 greeting = "hello world"
 otherMessage= "we back to coding,"
 insult="you son of a bitch"
@@ -123,3 +123,45 @@ print(greater_than_five)
 #Create a list of numbers that are divisible by 3 from a given list:
 more_than3=[i for i in numbers1 if  i%3==0]
 print(more_than3)
+'''
+numbers3=[1,2,3,4,5,6,67,7,8,9,10]
+print(numbers3[6])
+check="Josephus"
+print(check[::-1])
+print(check.isalpha())
+print(check.islower())
+print(check.isalnum())
+print("HelloWorld".isalnum())  
+print("Hello World".isalnum())
+print("HelloWorld".isalpha())
+print("Hello123".isalpha()) 
+print("`")
+print("12345".isdigit())  # True
+print("Hello123".isdigit())  # False (contains alphabets)
+print("HELLO".isupper())  # True
+print("Hello".isupper())  # False (contains lowercase)
+print("hello".islower())  # True
+print("Hello".islower())  # False (contains uppercase)
+print("Hello World".istitle())  # True
+print("hello world".istitle())  # False (not title-cased)
+print("Hello World".startswith("Hello"))  # True
+print("Hello World".startswith("World"))  # False
+print("Hello World".endswith("World"))  # True
+print("Hello World".endswith("Hello"))  # False
+print("Hello World".index("World"))  # 6
+print("Hello World".find("World"))  # 6
+print("Hello World".find("Universe"))  # -1 (not found)
+print("Hello World".rfind("World"))  # 6
+print("Hello World".rindex("World"))  # 6
+print("Hello World".count("o"))  # 2
+print("Hello World".replace("World", "Universe"))  # Hello Universe
+print("   Hello World".lstrip())  # Hello World
+print("Hello World   ".rstrip())  # Hello World
+print("   Hello World   ".strip())  # Hello World
+print("Hello World".split())  # ['Hello', 'World']
+print("Hello,World".split(","))  # ['Hello', 'World']
+print("Hello\nWorld".splitlines())  # ['Hello', 'World']
+print("hello world".capitalize())  # Hello world
+print("hello world".upper())  # HELLO WORLD
+print("HELLO WORLD".lower())  # hello world
+print("hello world".title())  # Hello World
