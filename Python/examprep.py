@@ -203,3 +203,30 @@ suquare=[i**2 for i in numbers3]
 print(suquare)
 suquare_div_by_3=[num for num in numbers3 if num%3==0]
 print(suquare_div_by_3)
+#1 Consider a circle of area A. We know that the are of the circle is calculated as πr2 = A. Create a function that finds the radius of a circle given the area.
+def circle_radius(Area):
+    import math
+    radius=(Area/(math.pi))**0.5
+    return radius
+print(circle_radius(154))
+#A palindrome is a word, phrase, or sequence that reads the same backwards as forwards, e.g. madam or nurses run. Write python code to test if a string is a palindrome
+def palindrome(word):
+    for i in word:
+        word=word.lower()
+        if word ==word[::-1]:
+            print("this word is a palindrome")
+        else: print("this word is not a fucking palindrome")
+        return None
+print(palindrome("MaLlam"))
+
+#Let a = (a1, a2) and b = (b1, b2) be vectors, we know that a · b = |a| |b| cos θ. Find the angle between the two vectors defined by the tuple (4,3) and (5,12).
+def Angle():
+    import math
+    A=(4,3)
+    B=(5,12)
+    A_DOT_B=(A[0]*B[0])+(A[1]*B[1])
+    mag_A=(((A[0])**2)+((A[1])**2))
+    mag_B=(((B[0])**2)+((B[1])**2))
+    angle=math.acos(A_DOT_B/(mag_A*mag_B))
+    return angle
+print(Angle())
