@@ -1,3 +1,4 @@
+
 greeting = "hello world"
 otherMessage= "we back to coding,"
 insult="you son of a bitch"
@@ -84,3 +85,41 @@ print("monkey" in animals)
 print("monkey" in animals[0])
 print("monkey" not in animals)
 print("monkey" not in animals[0])
+
+#list comprehension
+numbers1=[1,2,3,4,5,6,7,8,9,10]
+even_numbers1=[num for num in numbers1 if num % 2 == 0]
+print(even_numbers1)
+
+odd_numbers=[num for num in numbers1 if num%2 !=0]
+print(odd_numbers)
+
+letters=["so","some","go","lo","bingo","aop","to","an","in","bin"]
+two_letter=[i for i in letters if len(i)==2]
+print(two_letter)
+not_three_letters=[i for i in letters if len(i)!=2]
+print(not_three_letters)
+print(not_three_letters+two_letter)
+#Create a list of squares of numbers from 1 to 10
+square_nums=[i**2 for i in numbers1]
+print(square_nums)
+even_square_nums=[i**2 for i in range(2,11,2)]
+print(even_square_nums)
+#Create a list of even numbers from 1 to 20:
+evennums=[i for i in range(1,21) if i%2==0]
+print(evennums)
+evennums1=[i for i in range(2,21,2)]
+print(evennums1)
+#Create a list of words that start with 's' from a given list:
+words = ["apple", "bananas", "strawberry", "oranges", "spinachs"]
+s_words=[i for i in words if i.startswith("s")]
+print(s_words)
+words_s=[i for i in words if i.endswith("s")]
+print(words_s)
+#Create a list of numbers that are greater than 5 from a given list:
+numbers = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+greater_than_five=[i for i in numbers if i>5]
+print(greater_than_five)
+#Create a list of numbers that are divisible by 3 from a given list:
+more_than3=[i for i in numbers1 if  i%3==0]
+print(more_than3)
