@@ -166,7 +166,7 @@ print("hello world".capitalize())  # Hello world
 print("hello world".upper())  # HELLO WORLD
 print("HELLO WORLD".lower())  # hello world
 print("hello world".title())  # Hello World
-'''
+
 #for i in numbers3:
  #   print(i)
 div_2=[]
@@ -230,3 +230,38 @@ def Angle():
     angle=math.acos(A_DOT_B/(mag_A*mag_B))
     return angle
 print(Angle())
+dec=10
+print(bin(dec))
+print(hex(dec))
+'''
+#filter function
+def is_even(num):
+    return num%2==0
+numbers=[1,2,3,4,5,6,7,8,9,10]
+evens=list(filter(is_even,numbers))
+print(evens)
+#filter numbers divisible by 3 from a list of cube numbers
+rnumbers=[1,2,3,4,5,6,7,8,9,10]
+cube_nums=[num**3 for num in rnumbers]
+print(cube_nums)
+def cubic(s):
+    return s%3==0
+div_by3=list(filter(cubic,cube_nums))
+print(div_by3)
+#filter odd numbers
+def odds(o):
+    return o%2!=0
+odd_nums=list(filter(odds,rnumbers))
+print(odd_nums)
+#filter even numbers
+def evenss(m):
+    return m%2==0
+even_nums=list(filter(evenss,rnumbers))
+print(even_nums)
+
+fruits = ['Apple', 'banana', 'avocado', 'cherry','ama','uso','orange','machine' 'gun','kelly','jelly','roll']
+def vowels(v):
+    #v=v.lower()
+    return v.startswith("a") or v.startswith("e") or v.startswith("i") or v.startswith("o") or v.startswith("u")
+vowel_words=list(filter(vowels,fruits))
+print(vowel_words)
