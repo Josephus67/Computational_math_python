@@ -261,7 +261,12 @@ print(even_nums)
 
 fruits = ['Apple', 'banana', 'avocado', 'cherry','ama','uso','orange','machine' 'gun','kelly','jelly','roll']
 def vowels(v):
-    #v=v.lower()
+    v=v.lower()
     return v.startswith("a") or v.startswith("e") or v.startswith("i") or v.startswith("o") or v.startswith("u")
 vowel_words=list(filter(vowels,fruits))
 print(vowel_words)
+def consonants(c):
+    c=c.lower()
+    return not (c.startswith("a") or c.startswith("e") or c.startswith("i") or c.startswith("o") or c.startswith("u"))
+consonant_words=list(filter(consonants,fruits))
+print(consonant_words)
