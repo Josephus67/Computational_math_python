@@ -296,3 +296,28 @@ def rect(R,theta):
     y=R*(math.sin(theta))
     return (x,y)
 print(rect(10,math.pi/2))
+
+def rec2pol(x,y):
+    import math
+    R=math.sqrt(x**2+y**2)
+    theta=math.atan(y/x)
+    return (R,theta)
+print(rec2pol(5,0))
+
+def dotprod():
+    x=[1,2,3,4]
+    y=[4,5,6,7]
+    dot=[]
+    for i,j in zip(x,y):
+        dot.append(i*j)
+    total=sum(dot)
+    return dot,total
+print(dotprod())
+
+def dotprod(x,y):
+    if len(x)!=len(y):
+        print("Vectors must be of the same length")
+    return sum(a*b for a,b in zip(x,y))
+x=[1,2,3,4]
+y=[4,5,6,7]
+print(dotprod(x,y))
