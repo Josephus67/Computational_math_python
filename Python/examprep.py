@@ -329,3 +329,18 @@ def f(x):
     return x**3
 print(deriv(f,2))
 print("hello world")
+def cosapprox(theta,N):
+    import math
+    approx1=[]
+    for n in range(0,N+1) :
+        approx=((-1)**n)*(theta**(2*n))/math.factorial(2*n)
+        approx1.append(approx)
+    return sum(approx1),approx1
+print(cosapprox(math.radians(45),3))
+
+def line(a,d,lamda=2):
+    return (a[0]+lamda*(d[0])),(a[1]+lamda*(d[1]))
+a=[1,2]
+b=[3,4]
+
+print(line(a,b))
