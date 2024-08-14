@@ -233,7 +233,7 @@ print(Angle())
 dec=10
 print(bin(dec))
 print(hex(dec))
-'''
+
 #filter function
 def is_even(num):
     return num%2==0
@@ -270,3 +270,29 @@ def consonants(c):
     return not (c.startswith("a") or c.startswith("e") or c.startswith("i") or c.startswith("o") or c.startswith("u"))
 consonant_words=list(filter(consonants,fruits))
 print(consonant_words)
+'''
+import math
+add_five=lambda x: x+5
+print(add_five(10))
+#Create a function that takes a two numbers a and b and finds their average. The name of the function should be avg.
+def avg(a,b):
+    return (a+b)/2
+print(avg(2,3))
+#Create a function that takes an integer as its argument and returns a list of all the factors of the number. As an example, for the number 28, your function should return the list [1,2,4,7,14,28]; for the number 23 it should return [1,23]. The name of your function should be factors.
+def factors(x):
+    facts=[]
+    for i in range(1,x+1):
+        if x%i==0:
+            facts.append(i)
+    return(facts)
+print(factors(10))
+def factor(x):
+    return [i for i in range(1,x+1) if x%i==0]
+print(factor(20))
+#Write a function rect that takes two arguments, the distance and the angle and returns a tuple with the  and x-y coordinates.
+def rect(R,theta):
+    import math
+    x=R*(math.cos(theta))
+    y=R*(math.sin(theta))
+    return (x,y)
+print(rect(10,math.pi/2))
