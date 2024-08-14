@@ -321,3 +321,10 @@ def dotprod(x,y):
 x=[1,2,3,4]
 y=[4,5,6,7]
 print(dotprod(x,y))
+
+def deriv(f,x,h=1e-7):
+    diff_quo=(f(x+h)-f(x))/h
+    return diff_quo
+def f(x):
+    return x**3
+print(deriv(f,2))
