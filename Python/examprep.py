@@ -264,13 +264,15 @@ def vowels(v):
     v=v.lower()
     return v.startswith("a") or v.startswith("e") or v.startswith("i") or v.startswith("o") or v.startswith("u")
 vowel_words=list(filter(vowels,fruits))
+
+
 print(vowel_words)
 def consonants(c):
     c=c.lower()
     return not (c.startswith("a") or c.startswith("e") or c.startswith("i") or c.startswith("o") or c.startswith("u"))
 consonant_words=list(filter(consonants,fruits))
 print(consonant_words)
-'''
+
 import math
 add_five=lambda x: x+5
 print(add_five(10))
@@ -344,3 +346,20 @@ a=[1,2]
 b=[3,4]
 
 print(line(a,b))
+print("hellow world")
+'''
+add_3=lambda x: x+5
+print(add_3(3))
+squaree=lambda x: x**2
+print(squaree(30))
+bingo=["apple","ball","cat","dog","egg","fish","umbrella","iron","orange"]
+print(sorted(bingo))
+def vaul(wed):
+    return wed.startswith("a") or wed.startswith("e") or wed.startswith("i") or wed.startswith("o") or wed.startswith("u")
+vaul_weds=list(filter(vaul,bingo))
+print(vaul_weds)
+peter=[1,2,3,4,5,6,7,8,9,10]
+griffin=list(map(lambda x:x**2,peter))
+print(griffin)
+def add(x,y):
+    return x+y
