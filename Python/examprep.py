@@ -363,3 +363,10 @@ griffin=list(map(lambda x:x**2,peter))
 print(griffin)
 def add(x,y):
     return x+y
+print("hello world")
+
+i=0
+while i!=10:
+    print(i)
+    i+=1
+import numpy as np
