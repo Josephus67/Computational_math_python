@@ -409,3 +409,15 @@ def isPrime(a):
         return True
     else: return False
 isPrime(9)
+
+s="abc"
+t="ahbgdc"
+
+if t[0]+t[1]+t[2]=="abc" or t[1]+t[2]+t[3]=="abc" or t[2]+t[3]+t[4]=="abc" or t[3]+t[4]+t[5]=="abc":
+    print("true")
+else: print("false")
+print("hello world")
+hello=[]
+for i in t:
+    hello .append(i)
+print(hello)
