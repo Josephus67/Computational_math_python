@@ -399,3 +399,13 @@ def coprime(N,M):
         return True
     else: return False
 print(coprime(3,540))
+
+def isPrime(a):
+    primecheck=[]
+    for i in range(1,a+1):
+        if a%i==0:
+            primecheck.append(i)
+    if primecheck==[1,a]:
+        return True
+    else: return False
+isPrime(9)
