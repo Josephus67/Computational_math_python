@@ -369,4 +369,33 @@ i=0
 while i!=10:
     print(i)
     i+=1
-import numpy as np
+def factors(N):
+    if not isinstance(N,int) or N == 0:
+        raise ValueError("Only non-zero integer arguments are allowed")
+    if N < 0:
+        N = abs(N)
+    return list(filter(lambda x: N%x == 0,range(1,N+1)))
+
+def gcd(N,M):
+    factors_N=[i for i in range(1,N+1) if N%i==0]
+    factors_M=[j for j in range(1,M+1) if M%j==0]
+    commons=[]
+    for n,m in zip(factors_N,factors_M):
+        if n==m:
+            commons.append(n)
+    maximum=max(commons)
+    return commons,maximum
+print(gcd(300,540))
+
+def coprime(N,M):
+    factors_N=[i for i in range(1,N+1) if N%i==0]
+    factors_M=[j for j in range(1,M+1) if M%j==0]
+    commons=[]
+    for n,m in zip(factors_N,factors_M):
+        if n==m:
+            commons.append(n)
+    maximum=max(commons)
+    if maximum==1:
+        return True
+    else: return False
+print(coprime(3,540))
