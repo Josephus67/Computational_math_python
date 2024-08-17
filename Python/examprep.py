@@ -124,8 +124,9 @@ print(greater_than_five)
 more_than3=[i for i in numbers1 if  i%3==0]
 print(more_than3)
 '''
-numbers3=[1,2,3,4,5,6,67,7,8,9,10]
 '''
+numbers3=[1,2,3,4,5,6,67,7,8,9,10]
+
 print(numbers3[6])
 check="Josephus"
 print(check[::-1])
@@ -348,6 +349,7 @@ b=[3,4]
 print(line(a,b))
 print("hellow world")
 '''
+'''
 add_3=lambda x: x+5
 print(add_3(3))
 squaree=lambda x: x**2
@@ -421,3 +423,63 @@ hello=[]
 for i in t:
     hello .append(i)
 print(hello)
+'''
+'''
+def setdiff(A,B):
+    diff=[]
+    for i in A:
+        for j in B:
+            if i==j:
+                diff.append(i)
+    A_only=list(filter(diff,A))
+    return A_only
+A=[1,2,3,4,5,6]
+B=[3,4,5,6,7,8]
+print(setdiff(A,B))
+A=['gideon','isaac','debrah','mensah','owusu','ansah']
+B=['isaac','elwin','owusu','mensah','gideon','paul']
+print(setdiff(A,B))
+'''
+b="hey there"
+c=b.join("hello world")
+print(c)
+def factors(N):
+    if not isinstance(N,int) or N == 0:
+        raise ValueError("Only non-zero integer arguments are allowed")
+    if N < 0:
+        N = abs(N)
+    return list(filter(lambda x: N%x == 0,range(1,N+1)))
+
+def gcd(N_1,N_2):
+    maxi=[]
+    factors1=[]
+    factors2=[]
+    for i in range(1,N_1+1):
+        if N_1%i==0:
+            factors1.append(i)
+    for j in range(1,N_2+1):
+        if N_2%j==0:
+            factors2.append(j)
+    for m,n in zip(factors1,factors2):
+        if m in (factors1 and factors2):
+            maxi.append(m)
+    maximum=max(maxi)
+    return factors1,factors2,maxi,maximum
+print(gcd(15,20))
+
+def gcd(N_1,N_2):
+    maxi=[]
+    factors1=[]
+    factors2=[]
+    for i in range(1,N_1+1):
+        if N_1%i==0:
+            factors1.append(i)
+    for j in range(1,N_2+1):
+        if N_2%j==0:
+            factors2.append(j)
+    for m,n in zip(factors1,factors2):
+        if m in (factors1 and factors2):
+            maxi.append(m)
+    maximum=max(maxi)
+    return factors1,factors2,maxi,maximum
+print(gcd(15,20))
