@@ -483,3 +483,73 @@ def gcd(N_1,N_2):
     maximum=max(maxi)
     return factors1,factors2,maxi,maximum
 print(gcd(15,20))
+
+def isPrime(N):
+    maxi=[]
+    factors1=[]
+    for i in range(1,N+1):
+        if N%i==0:
+            factors1.append(i)
+    if factors1==[1,N]:
+        return True
+    else: return False
+isPrime(3)
+
+
+def dotproduct(a,b):
+    if not isinstance(a,(list,tuple)) or not isinstance(b,(list,tuple)):
+        raise TypeError('The arguments a and b represent vectors and must be list or tuple')
+    if len(a) != len(b):
+        raise ValueError("The vectors a and b must have the same length")
+
+    return sum(map(lambda x: a[x]*b[x],range(len(a))))
+
+def triples(a,b):
+    import math
+    c=math.sqrt((a**2)+(b**2))
+    if c in range(1,1000000000000000):
+        return a,b,c
+    else: return "None"
+print(triples(3,6))
+
+def triples1(a,b):
+    import math
+    c=math.sqrt((a**2)+(b**2))
+    if c==int(c):
+        return a,b,c
+    else: return None
+print(triples1(3,4))
+
+def setdiff(A,B):
+    diff=[]
+    for i,j in zip(A,B):
+        if i==j:
+            diff.append(i)
+    return diff
+A=[1,2,3,4]
+B=[3,4,5,6]
+print(setdiff(A,B))
+        
+def setdiff(A,B):
+    diff=[]
+    for i,j in zip(A,B):
+        if i==j:
+            diff.append(i)
+    return diff
+A=[1,2,3,4]
+B=[3,4,5,6]
+print(setdiff(A,B))
+
+
+def hangle(a):
+    import numpy as np
+    import math
+    a=np.array(a)
+    mag_a=math.sqrt((a[0]**2)+a[1]**2)
+    x=np.array([1,0])
+    theta=math.acos(sum(a*x)/mag_a)
+    if a[1]<0:
+        theta=2*math.pi-theta
+    return theta
+a=[-3,-4]
+print(hangle(a))
