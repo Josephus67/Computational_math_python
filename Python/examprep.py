@@ -564,3 +564,21 @@ def sum_up(nums,target):
 nums=[1,2,3,4,5,6,7,8,9,10]
 target=10
 sum_up(nums,10)
+
+def is_valid(s):
+    stack = []
+    bracket_map = {')': '(', '}': '{', ']': '['}
+    for char in s:
+        if char in bracket_map:
+            top_element = stack.pop() if stack else '#'
+            if bracket_map[char] != top_element:
+                return False
+        else:
+            stack.append(char)
+    return not stack
+
+print(is_valid("()"))        
+print(is_valid("()[]{}"))    
+print(is_valid("(]"))        
+print(is_valid("([)]"))      
+print(is_valid("{[]}"))      
