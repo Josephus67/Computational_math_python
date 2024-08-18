@@ -554,3 +554,13 @@ def hangle(a):
 a=[-3,-4]
 print(hangle(a))
 print("hello world")
+def sum_up(nums,target):
+    sums=[]
+    for i in nums:
+        for j in nums:
+            if i<=j and i+j==target:
+                sums.append([i,j])
+    return sums
+nums=[1,2,3,4,5,6,7,8,9,10]
+target=10
+sum_up(nums,10)
