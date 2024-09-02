@@ -77,11 +77,11 @@
     <script>
         let computerChoice = '';
         let randomNum = Math.random();
-        if (randomNum < 0.34) {
+        if (randomNum < 0.34 && randomNum > 0) {
             computerChoice = 'rock';
-        } else if (randomNum <= 0.67) {
+        } else if (randomNum <= 0.67 && randomNum >=0.34) {
             computerChoice = 'paper';
-        } else {
+        } else if (randomNum > 0.67 && randomNum < 1) {
             computerChoice = 'scissors';
         }
     </script>
