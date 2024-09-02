@@ -5,21 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <style>
-       .buttons{
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
+        .buttons{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
         .rock{
             border: none;
-            background-color: Red;
+            background-color: red;
             border-radius: 40px;
             height: 60px;
             width: 60px;
-            &:hover{
-                background-color: black;
-                color: white;
-            }
         }
         .paper{
             border: none;
@@ -27,10 +23,6 @@
             border-radius: 40px;
             height: 60px;
             width: 60px;
-            &:hover{
-                background-color: black;
-                color: white;
-            }
         }
         .scissors{
             border: none;
@@ -39,42 +31,59 @@
             height: 60px;
             width: 60px;
             font-size: 10px;
-            &:hover{
-                background-color: black;
-                color: white;
-            }
+        }
+        .rock:hover, .paper:hover, .scissors:hover {
+            background-color: black;
+            color: white;
         }
     </style>
 </head>
 <body>
     <div class="buttons">
-    <button title="rock" class="rock"
-    onclick="
-    let computerChoice = '';
-    let randomNum= Math.random();
-    if (randomNum < 0.34){
-        computerChoice = 'rock';
-    } else if (randomNum <= 0.67){
-        computerChoice = 'paper';
-    } else {
-        computerChoice ='scissors';
-    }
+        <button type="button" title="rock" class="rock"
+        onclick="
+            if (computerChoice === 'rock'){
+                alert('Computer chose ROCK. It is a TIE!');
+            } else if (computerChoice === 'paper'){
+                alert('Computer chose PAPER. You LOSE!');
+            } else {
+                alert('Computer chose SCISSORS. You WIN!');
+            }
+        ">ROCK</button>
 
-        if (computerChoice === 'rock'){
-            alert('Computer chose ROCK. It is a TIE!');
-        } else if (computerChoice === 'paper'){
-            alert('Computer chose PAPER. You LOSE!');
+        <button type="button" title="paper" class="paper"
+        onclick="
+            if (computerChoice === 'paper'){
+                alert('Computer chose PAPER. It is a TIE!');
+            } else if (computerChoice === 'scissors'){
+                alert('Computer chose SCISSORS. You LOSE!');
+            } else {
+                alert('Computer chose ROCK. You WIN!');
+            }
+        ">PAPER</button>
+
+        <button type="button" title="scissors" class="scissors"
+        onclick="
+            if (computerChoice === 'scissors'){
+                alert('Computer chose SCISSORS. It is a TIE!');
+            } else if (computerChoice === 'rock'){
+                alert('Computer chose ROCK. You LOSE!');
+            } else {
+                alert('Computer chose PAPER. You WIN!');
+            }
+        ">SCISSORS</button>
+    </div>
+
+    <script>
+        let computerChoice = '';
+        let randomNum = Math.random();
+        if (randomNum < 0.34) {
+            computerChoice = 'rock';
+        } else if (randomNum <= 0.67) {
+            computerChoice = 'paper';
         } else {
-            alert('Computer chose SCISSORS. You win!');
+            computerChoice = 'scissors';
         }
-    "
-    >ROCK</button>
-    <button title="paper" class="paper">PAPER</button>
-    <button title="scissors" class="scissors">SCISSORS</button>
-</div>
-
-<script>
-    let randomNumber= Math.random()
-</script>
+    </script>
 </body>
 </html>
