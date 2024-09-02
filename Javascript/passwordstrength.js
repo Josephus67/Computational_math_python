@@ -1,3 +1,4 @@
+/*
 let password= "#Bigjoe67";
     if(password.length>=8){
        console.log("first requirement has been met");
@@ -15,5 +16,18 @@ let password= "#Bigjoe67";
                 console.log("Your password has at least one number")
             }
             else{console.log("your password does not include a number")}
-    
+   */ 
+  computerChoice='';
+  function randNum(){
+    num= Math.random();
+    if (num<0.34 && num >0){
+        computerChoice = 'rock'
+    } else if (num>=0.3 && num<0.67){
+        computerChoice='paper'
+    } else if (num>= 0.67 && num<1){
+        computerChoice='scissors'
+    }
+    return computerChoice;
+  }
+  console.log(randNum());
     

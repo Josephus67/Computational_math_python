@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROCK PAPER SCISSORS1</title>
+</head>
+<body>
+    <h1>Rock paper scissors game</h1>
+    <button type="button" title="rock" class="rock"
+    onclick="
+    randNum();
+    if (randNum()==='rock'){
+    alert(valueAlert);
+    } else if (randNum()==='paper'){
+     alert(valueAlert);
+     } else if (randNum()==='scissors'){
+     alert(valueAlert); 
+     }
+
+    "
+    >ROCK</button>
+    <button type="button" title="paper" class="paper"
+    onclick="console.log(randNum())"
+    >PAPER</button>
+    <button type="button" title="scissors" class="scissors">SCISSORS</button>
+    <button type="button" title="reset" class="reset">RESET</button>
+    <script>
+        function randNum(){
+            num= Math.random();
+            if (num<0.34 && num >0){
+                computerChoice = 'rock'
+            } else if (num>=0.3 && num<0.67){
+                computerChoice='paper'
+            } else if (num>= 0.67 && num<1){
+                computerChoice='scissors'
+            }
+            return computerChoice;
+        }
+        valueAlert=`Computer chose ${randNum()}.`
+    </script>
+</body>
+</html>
