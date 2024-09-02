@@ -16,6 +16,10 @@
             border-radius: 40px;
             height: 60px;
             width: 60px;
+            &:hover{
+                background-color: black;
+                color: white;
+            }
         }
         .paper{
             border: none;
@@ -23,6 +27,10 @@
             border-radius: 40px;
             height: 60px;
             width: 60px;
+            &:hover{
+                background-color: black;
+                color: white;
+            }
         }
         .scissors{
             border: none;
@@ -31,15 +39,42 @@
             height: 60px;
             width: 60px;
             font-size: 10px;
+            &:hover{
+                background-color: black;
+                color: white;
+            }
         }
     </style>
 </head>
 <body>
     <div class="buttons">
-    <button title="rock" class="rock">ROCK</button>
+    <button title="rock" class="rock"
+    onclick="
+    let computerChoice = '';
+    let randomNum= Math.random();
+    if (randomNum < 0.34){
+        computerChoice = 'rock';
+    } else if (randomNum <= 0.67){
+        computerChoice = 'paper';
+    } else {
+        computerChoice ='scissors';
+    }
+
+        if (computerChoice === 'rock'){
+            alert('Computer chose ROCK. It is a TIE!');
+        } else if (computerChoice === 'paper'){
+            alert('Computer chose PAPER. You LOSE!');
+        } else {
+            alert('Computer chose SCISSORS. You win!');
+        }
+    "
+    >ROCK</button>
     <button title="paper" class="paper">PAPER</button>
     <button title="scissors" class="scissors">SCISSORS</button>
 </div>
 
+<script>
+    let randomNumber= Math.random()
+</script>
 </body>
 </html>
