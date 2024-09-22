@@ -20,3 +20,26 @@ elif choice.lower() == 'n':
 else: print("invalid input")
 
 
+import random
+
+choice = input("Do you want to play the dice rolling Game? y/n ")
+if choice.lower() == 'y':
+    roll_first = input("Roll the first dice? y/n ")
+    if roll_first.lower() == 'y':
+        dice1 = random.randint(1, 6)
+    else:
+        print("Ok, see you another time")
+        exit()
+
+    roll_second = input("Do you want to roll the second dice? y/n ")
+    if roll_second.lower() == 'y':
+        dice2 = random.randint(1, 6)
+        print(dice1, "and", dice2)
+    elif roll_second.lower() == 'n':
+        print("Ok, see you another time")
+    else:
+        print("Invalid input")
+elif choice.lower() == 'n':
+    print("Ok, see you another time")
+else:
+    print("Invalid input")
