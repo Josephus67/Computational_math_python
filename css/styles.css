@@ -1,0 +1,47 @@
+body {
+    background-color: aquamarine;
+    align-items: center;
+}
+.image1{
+    height: 100px;
+    width: 200px;
+    border-radius: 20px;
+    transform: translate(100px,200px) scale(0.8) rotate(279deg);
+}
+button{
+    background-color: rgb(79, 8, 221);
+    color: whitesmoke;
+    transition: 0.5s;
+    &:hover{
+        transform: scale(2);
+        background-color: whitesmoke;
+        color: black;
+    }
+}
+.button2{
+    background-color: yellow;
+    color: pink;
+    &:hover{
+        background-color: pink;
+        color: black;
+        transition: background-color .10s ease-in, color .5s ease-in-out, transform 2s ease-in-out;
+    }
+
+}
+.button3{
+    height: 40px;
+    width: 80px;
+    background-color: purple;
+    justify-content: center;
+    border-radius: 10px;
+    p {
+        font-size: 20px;
+        font-weight: bold;
+
+    }
+    &:hover{
+        color: whitesmoke;
+        background-color: black;
+        transform: scale(1.2) rotate(30deg);
+     }
+}
