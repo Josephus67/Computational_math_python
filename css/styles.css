@@ -1,3 +1,7 @@
+@keyframes  {
+    
+}
+
 body {
     background-color: aquamarine;
     align-items: center;
@@ -44,4 +48,10 @@ button{
         background-color: black;
         transform: scale(1.2) rotate(30deg);
      }
+}
+.intro-keyf{
+    font-size: 10rem;
+    font-family: 'Fira Sans',sans-serif;
+    color: #DCF2B0;
+    text-shadow: 5px, 5px, 0px, #59C3C3;
 }
