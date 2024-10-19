@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super simple Dev</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="buttons-container">
+    <button id="rock-button" type="button"
+    onclick="
+    if (computerChoice==='Rock'){
+        alert('Computer chose Rock, Its a TIE')
+    }
+        else if (computerChoice==='Paper'){
+        alert('Computer chose Paper, You WIN')
+    }
+        else if(computerChoice==='Scissors'){
+        alert('Computer chose Scissors, You LOSE')
+        }
+    "
+    >ROCK</button>
+    <button id="paper-button" type="button"
+    onclick="
+   if (computerChoice==='Rock'){
+        alert('Computer chose Rock, You LOSE')
+    }
+        else if (computerChoice==='Paper'){
+        alert('Computer chose Paper, it\'s a TIE')
+    }
+        else if(computerChoice==='Scissors'){
+        alert('Computer chose Scissors, You WIN')
+        } 
+    "
+    >PAPER</button>
+    <button id="scissors-button" type="button"
+    onclick="
+    if (computerChoice==='Rock'){
+        alert('Computer chose Rock, You WIN')
+    }
+        else if (computerChoice==='Paper'){
+        alert('Computer chose Paper, You LOSE')
+    }
+        else if(computerChoice==='Scissors'){
+        alert('Computer chose Scissors, its a TIE')
+        }
+    "
+    >SCISSORS</button>
+    </div>
+    <script>
+        let randomNumber = Math.random();
+        let userChoice = "";
+        let computerChoice = "";
+        if (randomNumber <= 0.34) {
+            computerChoice = "Rock"
+        } 
+        else if(randomNumber <= 0.64 && randomNumber > 0.34){
+            computerChoice = "Paper"
+        }
+        else{computerChoice = "Scissors"}
+
+    </script>
+</body>
+</html>
