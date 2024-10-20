@@ -10,55 +10,42 @@
     <div class="buttons-container">
     <button id="rock-button" type="button"
     onclick="
-    if (computerChoice==='Rock'){
-        alert('Computer chose Rock, Its a TIE')
-    }
-        else if (computerChoice==='Paper'){
-        alert('Computer chose Paper, You WIN')
-    }
-        else if(computerChoice==='Scissors'){
-        alert('Computer chose Scissors, You LOSE')
-        }
+    playGame('rock');
     "
     >ROCK</button>
     <button id="paper-button" type="button"
     onclick="
-   if (computerChoice==='Rock'){
-        alert('Computer chose Rock, You LOSE')
-    }
-        else if (computerChoice==='Paper'){
-        alert('Computer chose Paper, it\'s a TIE')
-    }
-        else if(computerChoice==='Scissors'){
-        alert('Computer chose Scissors, You WIN')
-        } 
+   playGame('paper');
     "
     >PAPER</button>
     <button id="scissors-button" type="button"
     onclick="
-    if (computerChoice==='Rock'){
-        alert('Computer chose Rock, You WIN')
-    }
-        else if (computerChoice==='Paper'){
-        alert('Computer chose Paper, You LOSE')
-    }
-        else if(computerChoice==='Scissors'){
-        alert('Computer chose Scissors, its a TIE')
-        }
+    playGame('scissors');
     "
     >SCISSORS</button>
     </div>
     <script>
-        let randomNumber = Math.random();
-        let userChoice = "";
-        let computerChoice = "";
-        if (randomNumber <= 0.34) {
-            computerChoice = "Rock"
-        } 
-        else if(randomNumber <= 0.64 && randomNumber > 0.34){
-            computerChoice = "Paper"
+        function playGame(userChoice){
+            let randomNumber = Math.random()
+            let computerChoice=""
+
+            if (randomNumber>0 &&  randomNumber<= 0.34){
+                computerChoice = 'rock'
+            }
+            else if(randomNumber <= 0.64 && randomNumber > 0.34){
+                computerChoice = 'paper'
+            } 
+            else if(randomNumber > 0.64 && randomNumber <= 1){
+                computerChoice = 'scissors'}
+
+            if (userChoice===computerChoice){
+                alert(`You chose ${computerChoice}. It is a tie!!`)
+            }
+            else if((userChoice==='rock' && computerChoice==='paper') || (userChoice=='paper' && computerChoice==='scissors') || (userChoice=='scissors' && computerChoice==='rock')) {
+                alert(`Computer chose ${computerChoice}. You WIN!!`)
+            }
+            else{alert(`Computer chose ${computerChoice}. You LOSE !! BIGTIME`)}
         }
-        else{computerChoice = "Scissors"}
 
     </script>
 </body>
