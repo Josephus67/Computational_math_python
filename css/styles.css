@@ -1,8 +1,14 @@
 @keyframes  scaleIn{
     0% {transform: scale(0.5) ;}
-    85% {transform: scale(1.2);}
+    85% {transform: scale(1.5);}
     100% {transform: scale(1) ;}
 }
+@keyframes picRobot {
+    0%{transform:scaleX(2)}
+    50%{transform: scale(0.5) translateX(100px);}
+    100% {transform: translateX(500px);}
+}
+    
 
 body {
     background-color: aquamarine;
@@ -12,7 +18,23 @@ body {
     height: 100px;
     width: 200px;
     border-radius: 20px;
-    transform: translate(100px,200px) scale(0.8) rotate(279deg);
+    animation-duration: 5s;
+    &:hover{
+    transform: translateX(500px) scale(2) rotate(180deg); 
+    animation-duration: 5s;
+    }
+}
+.image2{
+    height: 100px;
+    width: 200px;
+    border-radius: 50px;
+    &:hover{
+    animation-name: picRobot;
+    animation-duration: 4s;
+    animation-delay: 0.5s;
+    animation-iteration-count: 4;
+    animation-direction: alternate;
+    }
 }
 button{
     background-color: rgb(79, 8, 221);
@@ -57,9 +79,14 @@ h2{
     color: #DCF2B0;
     color: black;
     text-shadow: 5px 5px 0px #59C3C3;
+    background-color: #DCF2B0;
+    height: auto;
+    width: 130px;
 }
     h2:hover{
     animation-name: scaleIn ;
     animation-duration: 5s;
+    animation-delay: 3s;
+    animation-fill-mode: backwards;
     
     }
