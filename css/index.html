@@ -10,7 +10,9 @@
     <P>HELLO WORLD</P>
     <img src="./image1.jpg" alt="image1" class="image1">
     <img src="./image1.jpg" alt="image2" class="image2">
-    <button>Hello world</button>
+    <button
+    onclick="changeLyrics();"
+    >Hello world</button>
     <button type="button" class="button2">Bingo</button>
 
     <div class="button3"><p>Today</p></div>
@@ -28,13 +30,15 @@
         "
         >Click me</button>
     </div>
-    <pre id="lyrics"
-    onclick="changeLyrics();"
-    >
+    <pre id="lyrics">
         My God loves me
         His love will never end
         He rests within my heart for my God loves me
     </pre>
+    <p 
+    id="joyless"
+    onclick="changeDate();"
+    >Whatsapp brothers</p>
     <script>
         function myFunction() {
             alert('css kicks in soon');
@@ -52,6 +56,11 @@
             ' His faithful love endures' +
             ' Thou storms clouds, threaten the day' +
             ' he will set me free';
+        }
+
+        function changeDate() {
+            let z = document.getElementById('joyless')
+            z.innerHTML = Date();
         }
     </script>
 </body>
