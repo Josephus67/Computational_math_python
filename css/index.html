@@ -14,6 +14,45 @@
     <button type="button" class="button2">Bingo</button>
 
     <div class="button3"><p>Today</p></div>
-    <h2 class="intro-keyframe">Hello</h2>
+    <h2 class="intro-keyframe"
+    onclick="
+    myFunction();
+    "
+    >Hello</h2>
+
+    <div class="bingo">
+        <p id="lord">My soul is filled with Joy</p>
+        <button id="js-btn" class="btn"
+        onclick=" 
+        changeTextClick();
+        "
+        >Click me</button>
+    </div>
+    <pre id="lyrics"
+    onclick="changeLyrics();"
+    >
+        My God loves me
+        His love will never end
+        He rests within my heart for my God loves me
+    </pre>
+    <script>
+        function myFunction() {
+            alert('css kicks in soon');
+        }
+
+        function changeTextClick() {
+            
+       let x= document.getElementById('lord');
+       x.innerHTML = 'As I sing to God my saviour';
+        }
+
+        function changeLyrics() {
+            let y = document.getElementById('lyrics');
+            y.innerHTML = 'My God loves me' +
+            ' His faithful love endures' +
+            ' Thou storms clouds, threaten the day' +
+            ' he will set me free';
+        }
+    </script>
 </body>
 </html>

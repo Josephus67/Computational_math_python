@@ -90,3 +90,11 @@ h2{
     animation-fill-mode: backwards;
     
     }
+.bingo{
+    background-color: #DCF2B0;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 200px;
+    margin-left: 15%;
+}
