@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recarp</title>
+</head>
+<style>
+    #b_1{color: green;
+    background-color: yellow;
+    font-size: 20px;
+    margin-left: 2%;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    transition: transform 6s, border-radius 9s, font-size 3s ease-in, background-color 3s ease-in;
+}
+    #b_1:hover{color: red;
+    background-color: blue;
+    border: 2px solid black;
+    border-radius: 20px;
+    transform: scale(1.5);
+}
+@keyframes recarpture {
+    0% {opacity: 0.7;
+        transform: scale(1.8), translateY(200PX), rotate(120deg);}
+    50%{opacity: 0.4; transform: scale(1.2) translateX(240PX), rotate(240deg);}
+    100% {opacity: 1; transform: scale(1) translateX(200PX) rotate(360deg);}
+}
+    
+.imageRecarp{
+    height: 100px;
+    width: 150px;
+    &:hover{
+        animation-name: recarpture;
+        animation-duration: 6s;
+        animation-delay: 3s;
+        animation-direction: alternate;
+        animation-iteration-count: 4;
+    }
+}
+</style>
+<body>
+    <h1>Recarp section</h1>
+    <button id="b_1" type="button"
+    onclick="lesner();"
+    >Uso</button>
+    <button id="b_2" type="button"
+    onclick="
+    brock();
+    "
+    >BROCK</button>
+
+    <img src="./image1.jpg" alt="image1" class="imageRecarp">
+
+
+    <script>
+        function lesner() {
+            alert('Recarp');
+        }
+
+        function brock(){
+            let x = document.getElementById('b_1');
+            x.innerHTML = 'Brock'+lesner();;
+        }
+    </script>
+</body>
+</html>
