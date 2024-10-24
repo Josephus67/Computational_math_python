@@ -34,10 +34,19 @@
     &:hover{
         animation-name: recarpture;
         animation-duration: 6s;
-        animation-delay: 3s;
+        animation-delay: 1s;
         animation-direction: alternate;
-        animation-iteration-count: 4;
+        animation-iteration-count: 3;
+        animation-fill-mode: both;
     }
+}
+#imageRecarp1{
+    height: 100px;
+    width: 150px;
+    transition: transform 3s;
+}
+#imageRecarp1:hover{
+    transform: translateX(120px);
 }
 </style>
 <body>
@@ -52,7 +61,7 @@
     >BROCK</button>
 
     <img src="./image1.jpg" alt="image1" class="imageRecarp">
-
+    <img src="./image1.jpg" alt="image2" class="imageRecarpa" id="imageRecarp1">
 
     <script>
         function lesner() {
