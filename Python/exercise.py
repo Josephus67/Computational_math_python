@@ -40,3 +40,43 @@ def second_max_number(numbers):
 s=second_max_number([1, 3, 5, 7, 9, 90,2, 4, 6, 8, 10])
 print(s)
 #hello world
+def palindrome(s):
+    bingo=[]
+    reverse= s[::-1]
+    if reverse.lower()==s.lower() :
+        print(s, "is a palidrome")
+    else: print(s, "is not a palidrome")
+palindrome("joe")
+palindrome("madam")
+
+
+def evenOdd(x):
+    if x > 0 :
+        if x%2==0:
+            print(x, "is an even number")
+        else: print(x, "is an odd number")
+    else : print("value must be greater than zero")
+evenOdd(8)
+evenOdd(9)
+evenOdd(-1)
+
+
+def grade(y):
+    if y> 90:
+        print(y, "Grade A")
+    elif y>=60 and y<=90:
+        print(y, "Grade B")
+    else: print (y, "Grade F")
+grade(90)
+grade(91)
+grade(60)
+grade(61)
+grade(77)
+grade(45)
+grade(0)
+
+def num50():
+    for i in range(50):
+        if i>10:
+            print(i)
+num50()
