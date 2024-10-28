@@ -80,3 +80,13 @@ def num50():
         if i>10:
             print(i)
 num50()
+
+marks = {'geography':89,
+        'math':92,
+        'english':81,
+        'sciene':87}
+marks
+marks['math']
+marks['econs']=82
+marks.update({'history':80,'biology':80,'physics':88})
+del marks['geography']
