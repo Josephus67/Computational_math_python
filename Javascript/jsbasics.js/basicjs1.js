@@ -36,6 +36,7 @@ class backPack {
         pocketSize,
         strapLengthR,
         strapLengthL,
+        dateAcquired
     ){
         this.name = name;
         this.color = color;
@@ -44,6 +45,14 @@ class backPack {
          this.pocketSize = pocketSize;
         this.strapLengthR = strapLengthR;
         this.strapLengthL = strapLengthL;
+        this.dateAcquired = dateAcquired;
+    }
+    backPackAge(){
+        let now = new Date();
+        let acquired = new Date(this.dateAcquired)
+        let elapsed = now.getTime() - acquired.getTime();
+        let daysAcquired = Math.floor(elapsed/(10000*3600*24));
+        return daysAcquired
     }
 
 }
@@ -55,8 +64,17 @@ const everydayPack = new backPack(
     60,
     90,
     5,
-    6
+    6,
+    "December 5,2010 15:00:00 UTC",
 );
 
-console.log(everydayPack);
-console.log(everydayPack.color);
+//console.log(everydayPack);
+//console.log(everydayPack.color);
+
+//Date
+const dateToday = new Date();
+console.log(dateToday);
+console.log(dateToday.toDateString());
+console.log(dateToday.getDate());
+console.log(everydayPack.dateAcquired);
+console.log(everydayPack.backPackAge());
