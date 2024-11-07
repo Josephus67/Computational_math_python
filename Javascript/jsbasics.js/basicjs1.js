@@ -72,9 +72,33 @@ const everydayPack = new backPack(
 //console.log(everydayPack.color);
 
 //Date
+/*
 const dateToday = new Date();
 console.log(dateToday);
 console.log(dateToday.toDateString());
 console.log(dateToday.getDate());
 console.log(everydayPack.dateAcquired);
 console.log(everydayPack.backPackAge());
+*/
+
+class Student {
+    constructor(
+        name,
+        age,
+        grade,
+        now,
+    )
+        {
+        this.name = name;
+        this.age = age;
+        this.grade = grade;
+        this.now = now;
+    }
+}
+
+const student1 = new Student(
+    "Josephus",
+    25,
+    Date(),)
+
+console.log(student1.now);
