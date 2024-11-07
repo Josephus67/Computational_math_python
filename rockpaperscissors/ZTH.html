@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero to zero follow along</title>
+</head>
+<body>
+    <h1>Zero to zero follow along</h1>
+    <h1>`${content}`"</h1>
+    <p>bingo</p>
+</body>
+<script>
+
+class backPack {
+    constructor(
+        name,
+        color,
+        volume,
+        pocketNum,
+        pocketSize,
+        strapLengthR,
+        strapLengthL,
+        dateAcquired
+    ){
+        this.name = name;
+        this.color = color;
+        this.volume = volume;
+        this.pocketNum = pocketNum;
+         this.pocketSize = pocketSize;
+        this.strapLengthR = strapLengthR;
+        this.strapLengthL = strapLengthL;
+        this.dateAcquired = dateAcquired;
+    }
+    backPackAge(){
+        let now = new Date();
+        let acquired = new Date(this.dateAcquired)
+        let elapsed = now.getTime() - acquired.getTime();
+        let daysAcquired = Math.floor(elapsed/(10000*3600*24));
+        return daysAcquired
+    }
+
+}
+
+const everydayPack = new backPack(
+    "everyday Back Pack",
+    "grey",
+    30,
+    60,
+    90,
+    5,
+    6,
+    "December 5,2010 15:00:00 UTC",
+);
+const content = "Name goes here";
+const contents = `
+<h2>Backpack Information</h2>
+<p>Name: ${everydayPack.name}</p>
+<p>Color: ${everydayPack.color}</p>
+<p>Volume: ${everydayPack.volume} liters</p>
+<p>Pocket Number: ${everydayPack.pocketNum}</p>
+<p>Pocket Size: ${everydayPack.pocketSize} cm</p>
+<p>Strap Length Right: ${everydayPack.strapLengthR} cm</p>
+<p>Strap Length Left: ${everydayPack.strapLengthL} cm</p>
+<p>Date Acquired: ${everydayPack.dateAcquired}</p>
+<p>Age: ${everydayPack.backPackAge()} days</p>
+`;
+
+document.body.innerHTML = contentww;
+
+</script>
+</html>
