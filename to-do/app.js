@@ -17,6 +17,15 @@ addButton.addEventListener('click',function(e) {
   todoList.appendChild(listItem);
 
   const doneButton = document.createElement('button');
+  doneButton.textContent = 'Done';
+  doneButton.classList.add('done-button');
+
+  const deleteButton = document.createElement('button');
+  deleteButton.textContent = 'Delete';
+  deleteButton.classList.add('delete-button');
+
+  listItem.appendChild(doneButton);
+  listItem.appendChild(deleteButton);
 
   listInput.value = '';
 });
