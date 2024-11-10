@@ -1,6 +1,6 @@
 const listInput = document.getElementById('todo-input');
 const addButton = document.getElementById('add-todo');
-const todoList = document.getElementById('todo-list');
+const todoList = document.getElementById('todoList');
 
 addButton.addEventListener('click',function(e) {
   const todoText = listInput.value.trim();
@@ -28,6 +28,7 @@ addButton.addEventListener('click',function(e) {
   listItem.appendChild(deleteButton);
 
   listInput.value = '';
+  saveData();
 });
 
 
@@ -41,4 +42,13 @@ todoList.addEventListener('click', function(event) {
   else if (target.classList.contains('delete-button')) {
     listItem.remove();
   }
+  saveData();
 });
+
+function saveData(){
+  localStorage.setItem('data', todoList.innerHTML); 
+}
+function showTask(){
+  app.innerHTML= localStorage.getItem('data');
+}
+showTask();
