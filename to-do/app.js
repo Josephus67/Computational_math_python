@@ -49,6 +49,6 @@ function saveData(){
   localStorage.setItem('data', todoList.innerHTML); 
 }
 function showTask(){
-  app.innerHTML= localStorage.getItem('data');
+  todoList.innerHTML= localStorage.getItem('data');
 }
 showTask();
