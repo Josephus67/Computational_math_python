@@ -29,3 +29,16 @@ addButton.addEventListener('click',function(e) {
 
   listInput.value = '';
 });
+
+
+todoList.addEventListener('click', function(event) {
+  const target = event.target;
+  const listItem = target.parentNode
+
+  if (target.classList.contains('done-button')) {
+    listItem.classList.toggle('completed');
+  } 
+  else if (target.classList.contains('delete-button')) {
+    listItem.remove();
+  }
+});
