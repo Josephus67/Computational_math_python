@@ -47,3 +47,21 @@ print(isinstance(book1,Newspaper)) # False
 print(isinstance(n1,Newspaper)) # True
 print(isinstance(n2,Newspaper)) # True
 print(isinstance(book2,object)) # True
+
+
+#recap of class
+
+class athlete:
+    def __init__(self,name,age,weight,record):
+        self.name = name
+        self.age = age
+        self.weight = weight
+        self.sport = record
+    
+ufc = athlete("Conor McGregor",32,155,"MMA")
+nba = athlete("Lebron James",36,250,"Basketball")
+nfl = athlete("Tom Brady",43,225,"American Football")
+print(ufc.name,nba.sport,nfl.weight)
+
+
+    
