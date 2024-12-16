@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Critical Thinkers</title>
+    <style>
+        /* General body styling */
+        body {
+            background-color: black;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        /* Header container */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        /* Logo and title container */
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Digital Clock Styling */
+        .digital-clock {
+            font-size: 18px;
+            color: #00ff00; /* Bright green color reminiscent of old digital displays */
+            background-color: #111;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-left: 15px;
+        }
+
+        /* Logo image size */
+        .logo img {
+            width: 50px;
+            height: auto;
+        }
+
+        /* Title styling */
+        .a {
+            margin-left: 10px;
+        }
+
+        /* Menu icon styling */
+        .menu-icon {
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        /* Remove blue color and underline from the link */
+        .menu-icon a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Dropdown menu styling */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+            border-radius: 5px;
+            top: 35px;
+            right: 0;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #575757;
+        }
+
+        /* Show dropdown when hovering over the menu icon */
+        .menu-icon:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Container for the main content */
+        .x {
+            background-color: black;
+            border-radius: 22px;
+            margin-top: 10px;
+        }
+
+        /* Main content section */
+        .b {
+            color: white;
+            background-color: #212121;
+            padding-bottom: 10px;
+            padding-top:10px;
+            justify-content:flex;         
+            border-radius: 20px;
+            text-align: center;
+            align-content:center;      
+        }
+
+        /* Section Styling */
+        .section {
+            background-color: #333;
+            margin-top: 20px;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        /* Section Heading */
+        .section h3 {
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+            .menu-icon {
+                margin-left: auto;
+            }
+            .digital-clock {
+                font-size: 14px;
+                margin-left: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="x"> 
+        <div class="header">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="ab.png" alt="logo">
+                </div>
+                <div class="a">
+                    <h2>Critical Thinkers</h2>
+                </div>
+                <div class="digital-clock" id="digital-clock">00:00:00</div>
+            </div>
+            <div class="menu-icon">
+                <a href="javascript:void(0)">&#x22EE;</a>
+                <!-- Dropdown Menu -->
+                <div class="dropdown-content">
+                    <a href="index.html">Home</a>
+                    <a href="Resources.html">Resources</a>
+                    <a href="Magazine.html">Magazine</a>
+                    <a href="Archive.html">Archive</a>
+                    <a href="Team.html">Team</a>
+                    <a href="Contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <center><h1 style="background: linear-gradient(to right, black, white); border-radius:15px; padding:20px;margin-top:20px;">Blogs</h1>
+</center>
+    
+    <!-- Main Content Section -->
+    <div style="font-family: Arial, sans-serif; line-height: 1.6; color:white;background-color:#172121;padding-top:10px;padding-bottom:10px;border-radius:20px;">
+  <h2 style="color: #595959;margin-bottom:5px;">New Class of Magnetism Discovered: Altermagnetism</h2>
+  <p>Scientists have imaged a new type of magnetism called <strong>altermagnetism</strong> for the first time, opening doors to faster and more efficient technology. This breakthrough could lead to magnetic memory devices that operate up to a thousand times faster than current technologies.</p>
+  
+  <h3 style="color: #00796b;">What is Altermagnetism?</h3>
+  <p>Altermagnetism is a unique form of magnetic order. In this type of magnetism, the tiny magnetic building blocks align in opposite directions (antiparallel) with their neighbors. However, the twist is that each block's position is rotated compared to its neighbors, creating a distinct pattern.</p>
+  
+  <blockquote style="border-left: 4px solid #ddd; margin: 10px 0; padding-left: 10px; font-style: italic; color: #555;">
+    "Altermagnets are like antiferromagnets, but with a twist. This small structural difference has huge implications for how we use magnetic materials in technology."  
+    <br><span style="font-weight: bold;">– Professor Peter Wadley</span>
+  </blockquote>
+  
+  <h3 style="color: #00796b;">Why is This Important?</h3>
+  <p>Magnetic materials are vital in computer memory and modern electronics. However, current magnetic technologies often rely on rare and toxic heavy elements, which contribute to high carbon emissions and environmental impact.</p>
+  
+  <ul>
+    <li><strong>Increase speed:</strong> Devices could become up to 1,000 times faster.</li>
+    <li><strong>Improve efficiency:</strong> These materials combine the strengths of current magnetic types (ferromagnets and antiferromagnets).</li>
+    <li><strong>Be environmentally friendly:</strong> They could reduce dependency on rare, toxic materials.</li>
+  </ul>
+  
+  <h3 style="color: #00796b;">The Research</h3>
+  <p>This discovery was made by a team from the University of Nottingham, with results published in the journal <em>Nature</em>. The experiments were conducted at the MAX IV synchrotron facility in Sweden, a cutting-edge lab that uses X-rays to study materials at the nanoscale.</p>
+
+  <!-- Image Section -->
+  <img src="https://scx1.b-cdn.net/csz/news/800a/2024/researchers-discover-n-42.jpg" alt="Visualization of altermagnetism" style="width: 100%; max-width: 600px; margin: 20px 0; display: block;">
+
+  <blockquote style="border-left: 4px solid #ddd; margin: 10px 0; padding-left: 10px; font-style: italic; color: #555;">
+    "Seeing the potential of altermagnetic materials firsthand has been an incredible experience."  
+    <br><span style="font-weight: bold;">– Alfred Dal Din, Ph.D. student</span>
+  </blockquote>
+  
+  <h3 style="color: #00796b;">What's Next?</h3>
+  <p>The study bridges theoretical concepts with practical applications, paving the way for new technologies. Senior Research Fellow Oliver Amin, a co-author of the study, says:</p>
+  
+  <blockquote style="border-left: 4px solid #ddd; margin: 10px 0; padding-left: 10px; font-style: italic; color: #555;">
+    "This is a step toward developing altermagnetic materials for real-world use."
+  </blockquote>
+  
+  <p>With continued research, altermagnetism could revolutionize electronics, creating faster, more sustainable technologies for the future.</p>
+</div>
+    
+    <div class="b">
+        <h3>Critical Thinkers Magazine</h3>
+        <p>
+            Critical Thinkers is a dynamic and intellectually stimulating magazine designed to inspire curious minds and foster a deep understanding of the world. Focused on diverse subjects such as Mathematics, Physics, Chemistry, Biology, and History, this publication serves as a bridge between complex ideas and accessible knowledge.
+
+            Each issue of Critical Thinkers is crafted to present well-researched articles, insightful analyses, and thought-provoking content that caters to students, educators, and enthusiasts alike. Whether you're solving challenging mathematical problems, exploring groundbreaking discoveries in science, or delving into the lessons of history, the magazine provides an engaging platform for critical inquiry.
+        </p>
+    </div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const clock = document.getElementById('digital-clock');
+            clock.textContent = now.toLocaleTimeString('en-US', {
+                hour: '2-digit', 
+                minute: '2-digit', 
+                second: '2-digit',
+                hour12: true
+            });
+        }
+
+        // Update clock immediately and then every second
+        updateClock();
+        setInterval(updateClock, 1000);
+    </script>
+</body>
+</html>
