@@ -8,3 +8,4 @@ response = requests.get(url,headers={'Accept':'text/html'})
 passed_response = bs(response.text,'html.parser')
 
 print(passed_response.prettify())
+
